@@ -1,0 +1,28 @@
+<header>
+  <h1>{{ shellStore.topBarTitle() }}</h1>
+
+  <div class="color-buttons">
+    <button (click)="shellStore.actualizarColorFondo('rgb(255,0,0)')"></button>
+    <button (click)="shellStore.actualizarColorFondo('rgb(0,255,0)')"></button>
+    <button (click)="shellStore.actualizarColorFondo('rgb(0,0,255)')"></button>
+  </div>
+</header>
+
+<nav>
+  <a routerLink="/plugin-one/page-one" routerLinkActive="active-link">Abrir page-one</a>
+  <a routerLink="/plugin-one/page-two" routerLinkActive="active-link">Abrir page-two</a>
+
+  <a routerLink="/plugin-two" routerLinkActive="active-link">Abrir Plugin 2 (app)</a>
+  <a routerLink="/project-native" routerLinkActive="active-link">
+    Proyecto externo 1
+  </a>
+  <a routerLink="/project-native-two" routerLinkActive="active-link">
+    Proyecto externo 2
+  </a>
+</nav>
+
+<main class="contenedor-de-plugins">
+  <router-outlet></router-outlet>
+</main>
+
+<footer>soy un footer</footer>

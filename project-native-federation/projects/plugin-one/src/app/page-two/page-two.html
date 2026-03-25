@@ -1,0 +1,5 @@
+<p>page-two works!</p>
+
+<ui-label texto="Envia un nuevo texto a la page one"></ui-label>
+<ui-input-text #inputTexto placeholder="Escribe algo..."></ui-input-text>
+<ui-button variant="primary" (clicked)="enviarTexto(inputTexto.value())">Enviar</ui-button>

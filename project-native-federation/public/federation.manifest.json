@@ -1,0 +1,5 @@
+{
+	"pluginOne": "http://localhost:4201/remoteEntry.json",
+	"pluginTwo": "http://localhost:4201/remoteEntry.json",
+	"project-native": "http://localhost:4203/remoteEntry.json"
+}

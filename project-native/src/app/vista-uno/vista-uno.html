@@ -1,0 +1,13 @@
+<p>vista-uno from project-native-one works!</p>
+<ui-label texto="Envia un texto a la page del segundo proyecto">
+</ui-label>
+<ui-input-text #inputTexto placeholder="Escribe algo...">
+</ui-input-text>
+<ui-button variant="primary" (clicked)="enviarTexto(inputTexto.value())"> Enviar
+</ui-button>
+
+<ui-input-text #titleTopBar placeholder="Escribe algo...">
+</ui-input-text>
+
+<ui-button variant="primary" (clicked)="cambiarTitulo(titleTopBar.value())"> Cambiar titulo
+</ui-button>

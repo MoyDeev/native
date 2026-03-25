@@ -1,0 +1,105 @@
+/* app.component.css */
+
+/* :host selecciona el propio componente <app-root> */
+:host {
+  display: grid;
+  /* Definimos las áreas de nuestra cuadrícula */
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+  /* El menú lateral medirá 250px, el área principal tomará el resto (1fr) */
+  grid-template-columns: 250px 1fr;
+  /* El header y footer se ajustan a su contenido, el main toma el resto */
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+header {
+  grid-area: header;
+  background-color: #0f172a; /* Un azul muy oscuro/elegante */
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #f8fafc; /* Gris muy claro */
+  padding: 2rem 1rem;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espacio entre los botones del menú */
+}
+
+nav a {
+  text-decoration: none;
+  color: #334155;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Angular puede agregar esta clase automáticamente cuando la ruta está activa */
+nav a.active-link {
+  background-color: #2563eb; /* Azul brillante para resaltar */
+  color: white;
+}
+
+main.contenedor-de-plugins {
+  grid-area: main;
+  padding: 2rem;
+  background-color: #ffffff;
+  overflow-y: auto; /* Si el plugin es muy largo, solo esta área hará scroll */
+}
+
+footer {
+  grid-area: footer;
+  background-color: #f1f5f9;
+  color: #64748b;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.color-buttons {
+  display: flex;
+  gap: 8px; /* espacio entre botones */
+}
+
+.color-buttons button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.color-buttons button:nth-child(1) {
+  background-color: rgb(255,0,0); /* rojo */
+}
+
+.color-buttons button:nth-child(2) {
+  background-color: rgb(0,255,0); /* verde */
+}
+
+.color-buttons button:nth-child(3) {
+  background-color: rgb(0,0,255); /* azul */
+}
